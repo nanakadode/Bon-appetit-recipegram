@@ -17,4 +17,11 @@
 @import "bootstrap";
 
 //  CSS partial
-@import "components/index"
+@import "components/index";
+
+// config
+@import "config/colors";
+
+.notification:not(:last-child){
+  margin-bottom: 0;
+}

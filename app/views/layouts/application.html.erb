@@ -19,15 +19,27 @@
         <p class="alert"><%= alert %></p>
       </div>
     <% end %>
-    <%= link_to root_path, class: 'navbar-item' do %>
-      <h1 class="title is-4" style="font-family: cursive;">Recipegram</h1>
-    <% end %>
-    <% if user_signed_in?  %>
-      <%= link_to 'Log out', destroy_user_session_path, method: :delete, class: 'button is-warning is-light' %>
-    <% else %>
-      <%= link_to 'Log in', new_user_session_path, method: :get, class: 'button is-warning is-light' %>
-      <%= link_to 'Sign up', new_user_registration_path, method: :get, class: 'button is-warning is-light' %>
-    <% end %>
+    <div class="navbar-container">
+      <div class="item-nav-recipegram">
+        <%= link_to root_path, class: 'navbar-item' do %>
+          <h3 class="title" style="font-family: cursive;">Recipegram</h1>
+        <% end %>
+      </div>
+      <div class="item-buttons">
+        <% if user_signed_in?  %>
+          <div class="item-button">
+            <%= link_to 'Log out', destroy_user_session_path, method: :delete, class: 'button is-warning is-light' %>
+          </div>
+        <% else %>
+          <div class="item-button">
+            <%= link_to 'Log in', new_user_session_path, method: :get, class: 'button is-warning is-light' %>
+          </div>
+          <div class="item-button">
+            <%= link_to 'Sign up', new_user_registration_path, method: :get, class: 'button is-warning is-light' %>
+          </div>
+        <% end %>
+      </div>
+    </div>
     <%= yield %>
   </body>
 </html>

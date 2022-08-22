@@ -1,0 +1,21 @@
+.navbar-item {
+  text-decoration: none;
+  color: #303030 !important ;
+  padding: 0;
+}
+.navbar-item :hover {
+  background-color:rgb(238, 42, 75);
+  padding: 0;
+  color: white;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  background-color:rgb(238, 42, 75);
+  padding: 15px;
+}
+
+.item-nav-recipegram h3 {
+  margin-bottom: 0;
+}
