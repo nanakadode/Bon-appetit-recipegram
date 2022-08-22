@@ -13,5 +13,8 @@
  *= require_tree .
  *= require_self
  */
- @import "bulma";
- @import "bootstrap";
+@import "bulma";
+@import "bootstrap";
+
+//  CSS partial
+@import "components/index"
