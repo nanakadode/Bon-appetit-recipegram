@@ -25,17 +25,25 @@
   padding: 0 24px;
 }
 
+.user-card {
+  grid: 3px;
+}
+
 .user-card p {
   margin: 0;
   line-height: 1.4;
 }
 
-.user-card {
-  grid: 3px;
+.user-img-name-profile {
+  text-decoration: none !important ;
 }
 
 .user-edit-delete {
   display: flex;
+}
+
+.user-edit-delete a {
+  text-decoration: none !important ;
 }
 
 .user-img {
