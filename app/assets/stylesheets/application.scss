@@ -13,9 +13,10 @@
  *= require_tree .
  *= require_self
  */
+
 @import "bulma";
 @import "bootstrap";
-
+@import "font-awesome";
 //  CSS partial
 @import "components/index";
 
