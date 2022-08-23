@@ -1,4 +1,18 @@
-<h1>Users#show</h1>
-<%= attachment_image_tag @user, :profile_img, fallback: "no-image.jpeg", class: "user-img" %>
-<p><%= @user.username %></p>
-<p><%= @user.email %></p>
+<div class="user-show-container">
+  <div class="item">
+    <%= attachment_image_tag @user, :profile_img, fallback: "no-image.jpeg", class: "user-show-img" %>
+  </div>
+  <div class="item user-show-profile">
+    <p><%= @user.username %></p>
+    <% if @user.id == current_user.id %>
+      <p><%= @user.email %></p>
+    <% end %>
+  </div>
+  <% if @user.id == current_user.id %>
+    <div class="item user-show-edit-delete">
+      <%= link_to edit_user_path(@user) do %>
+        <a class="btn">Edit <i class="fas fa-pencil-alt"></i></a>
+      <% end %>
+    </div>
+  <% end %>
+</div>

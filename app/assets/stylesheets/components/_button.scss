@@ -1,3 +1,5 @@
+// ==  user-index page ====================
+
 .button {
   text-decoration: none;
 }
@@ -9,4 +11,19 @@
 
 .item-button {
   margin: auto 5px;
+}
+
+// == user-show page ====================
+
+.user-show-edit-delete a {
+  margin-top: 20px;
+  color: white;
+  background-color: #999999;
+  font-size: 14px;
+  text-decoration: none !important ;
+
+  &:hover {
+    background-color: hsl(0, 0%, 33%);
+    color: white;
+  }
 }
