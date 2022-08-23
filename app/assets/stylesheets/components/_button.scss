@@ -15,7 +15,7 @@
 
 // == user-show page ====================
 
-.user-show-edit-delete a {
+.user-show-edit-button a {
   margin-top: 20px;
   color: white;
   background-color: #999999;
@@ -26,4 +26,16 @@
     background-color: hsl(0, 0%, 33%);
     color: white;
   }
+}
+
+// == user edit ================
+.user-edit-button {
+  margin-top: 20px;
+  color: white;
+  background-color: #999999;
+  font-size: 14px;
+  text-decoration: none !important ;
+  &:hover {
+    background-color: hsl(0, 0%, 33%);
+    color: white;
 }
