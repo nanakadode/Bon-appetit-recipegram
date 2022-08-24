@@ -5,18 +5,15 @@
       <%= f.input :username,
                 required: true,
                 autofocus: true,
-                input_html: { autocomplete: "name" },
-                class: "input" %>
+                input_html: { autocomplete: "name", class: "input" } %>
       <%= f.input :email,
                 required: true,
                 autofocus: true,
-                input_html: { autocomplete: "email" },
-                class: "input" %>
+                input_html: { autocomplete: "email", class: "input" } %>
       <%= f.input :profile,
                 required: true,
                 autofocus: true,
-                input_html: { autocomplete: "profile", rows: 3 },
-                class: "input" %>
+                input_html: { autocomplete: "profile", rows: 3, class: "input" } %>
       <%= f.label :profile_img, "Profile photo" %>
       <%= f.input :profile_img, label: false, as: :file %>
       <%= f.button :submit, class: "user-edit-button"%>
