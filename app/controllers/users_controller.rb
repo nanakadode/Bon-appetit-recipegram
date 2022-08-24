@@ -13,6 +13,16 @@ class UsersController < ApplicationController
     # @updated_user.save
   end
 
+  def update
+    @user = User.find(params[:id])
+    @user.update(user_params)
+    if @user.save
+      redirect_to user_path(@user)
+    else
+      render 'users/edit'
+    end
+  end
+
   private
 
   def user_params

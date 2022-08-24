@@ -18,7 +18,7 @@
                 input_html: { autocomplete: "profile" },
                 class: "input" %>
       <%= f.label :profile_img, "Profile photo" %>
-      <%= f.input :profile_img, label: false, as: :file, input_html: { hidden: true } %>
+      <%= f.input :profile_img, label: false, as: :file %>
       <%= f.button :submit, class: "user-edit-button"%>
     </div>
   <% end %>

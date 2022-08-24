@@ -10,9 +10,10 @@
   </div>
   <% if @user.id == current_user.id %>
     <div class="item user-show-edit-button">
-      <%= link_to edit_user_path(@user) do %>
-        <a class="btn">Edit <i class="fas fa-pencil-alt"></i></a>
-      <% end %>
-    </div>
-  <% end %>
-</div>
+      <%#= link_to edit_user_path(@user) do %>
+        <%= link_to "Edit", edit_user_path(@user), class: "btn" %>
+        <%# <a class="btn">Edit<i class="fas fa-pencil-alt"></i></a> %>
+        <%# end %>
+      </div>
+    <% end %>
+  </div>
