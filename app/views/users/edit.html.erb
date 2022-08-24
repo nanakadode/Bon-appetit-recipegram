@@ -15,7 +15,7 @@
       <%= f.input :profile,
                 required: true,
                 autofocus: true,
-                input_html: { autocomplete: "profile" },
+                input_html: { autocomplete: "profile", rows: 3 },
                 class: "input" %>
       <%= f.label :profile_img, "Profile photo" %>
       <%= f.input :profile_img, label: false, as: :file %>
