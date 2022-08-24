@@ -3,7 +3,8 @@
     <%= attachment_image_tag @user, :profile_img, fallback: "no-image.jpeg", class: "user-show-img" %>
   </div>
   <div class="item user-show-profile">
-    <p><%= @user.username %></p>
+    <h3 class="name bold"><%= @user.username %></h3>
+    <p><%= @user.profile %></p>
     <% if @user.id == current_user.id %>
       <p><%= @user.email %></p>
     <% end %>

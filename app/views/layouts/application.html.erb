@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Recipegram</title>
+    <title>recipegram</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -29,6 +29,9 @@
         <% if user_signed_in?  %>
           <div class="item-button">
             <%= link_to 'Log out', destroy_user_session_path, method: :delete, class: 'button is-warning is-light' %>
+          </div>
+          <div class="item-button">
+            <%= link_to 'Recipigramer List', users_path, class: 'button is-warning is-light' %>
           </div>
         <% else %>
           <div class="item-button">
