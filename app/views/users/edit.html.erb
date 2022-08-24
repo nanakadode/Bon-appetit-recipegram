@@ -1,6 +1,15 @@
 <h1>Users#edit</h1>
 <%= simple_form_for @user do |f| %>
-  <%= f.input :username %>
-  <%= f.input :email %>
-  <%= f.button :submit, class: "user-edit-button"%>
+  <div class="form-input">
+    <%= f.input :username,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "name" } %>
+    <%= f.input :email,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "email" } %>
+    <%= f.input :profile_img, as: :file, label: false, input_html: { class: "input" } %>
+    <%= f.button :submit, class: "user-edit-button"%>
+  </div>
 <% end %>
