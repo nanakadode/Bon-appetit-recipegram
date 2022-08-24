@@ -1,5 +1,14 @@
 // == user edit ================
 .input-img {
   border: none;
+  background-color: white;
 
+}
+
+.form-group {
+  // -> .form-inputs > .input
+  margin-bottom: 10px;
+}
+.form-control-file .file {
+  color: aqua;
 }
