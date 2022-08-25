@@ -13,7 +13,7 @@
       <%= f.input :profile,
                 required: true,
                 autofocus: true,
-                input_html: { autocomplete: "profile", rows: 3, class: "input" } %>
+                input_html: { autocomplete: "profile", rows: 4 } %>
       <%= f.label :profile_img, "Profile photo" %>
       <%= f.input :profile_img, label: false, as: :file %>
       <%= f.button :submit, class: "user-edit-button"%>
