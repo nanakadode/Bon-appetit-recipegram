@@ -1,9 +1,6 @@
 Rails.application.routes.draw do
-  get 'recipes/index'
-  get 'recipes/show'
-  get 'recipes/new'
-  get 'recipes/edit'
   devise_for :users
   root to: 'home#index'
   resources :users, only: %i[index show edit update]
+  resources :recipes, only: %i[index show new edit]
 end
