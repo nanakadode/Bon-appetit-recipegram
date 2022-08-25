@@ -1,7 +1,16 @@
 <h1>New Recipe</h1>
 <%= simple_form_for @recipe do |f| %>
-  <%= f.input :title, label: 'Title' %>
-  <%= f.input :body,  label: 'Discription', { row: 5 } %>
-  <%= f.input :image, as: :file, input_html { multiple: true } %>
+  <%= f.input :title,
+              label: 'Title',
+              autofocus: true
+              input_html: { autocomplete: "title" } %>
+  <%= f.input :body,
+              label: 'Discription',
+              input_html: { autocomplete: "body", row: 5 } %>
+  <%= f.label :image, "image" %>
+  <%= f.input :image,
+              as: :file,
+              label: false
+              input_html: { multiple: true } %>
   <%= f.button :submit %>
 <% end %>
