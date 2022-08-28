@@ -3,6 +3,7 @@ class RecipesController < ApplicationController
   end
 
   def show
+    @recipe = Recipe.find(params[:id])
   end
 
   def new
@@ -12,7 +13,6 @@ class RecipesController < ApplicationController
   def create
     @recipe = Recipe.new(recipe_params)
     @recipe.user_id = current_user.id
-    raise
     if @recipe.save
       redirect_to recipe_path(@recipe)
     else
