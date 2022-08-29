@@ -10,10 +10,10 @@
         <hr class="mt-0">
         <p class="mt-1"><%= simple_format @recipe.body %></p>
       </div>
+      <% if @recipe.user_id == current_user.id %>
+        <%= link_to "Edit", edit_recipe_path(@recipe), class: "button is-success" %>
+      <% end %>
     </div>
-    <% if @recipe.user_id == current_user.id %>
-      <%= link_to "Edit", edit_recipe_path %>
-    <% end %>
   </div>
 </div>
 <div>
