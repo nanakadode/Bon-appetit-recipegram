@@ -1,5 +1,9 @@
-<div class="container">
-  <h3><%= @recipe.title %></h3>
-  <p><%= simple_format @recipe.body %></p>
-  <%= attachment_image_tag @recipe, :image %>
+<div class="container d-flex justify-content-center mt-5">
+  <div class="recipe-card">
+    <div class="recipe-image ">
+      <%= attachment_image_tag @recipe, :image, class: "recipe-image-tag" %>
+    </div>
+    <h3><%= @recipe.title %></h3>
+    <p><%= simple_format @recipe.body %></p>
+  </div>
 </div>
