@@ -3,7 +3,7 @@
     <div class="recipe-image">
       <%= attachment_image_tag @recipe, :image, class: "recipe-image-tag" %>
     </div>
-    <div class="recipe-text p-3">
+    <div class="recipe-text px-4 pt-3 pb-3">
       <h3 class="mt-2"><%= @recipe.title %></h3>
       <div class="px-2">
         <p class="mb-0">Recipe</p>
@@ -11,6 +11,9 @@
         <p class="mt-1"><%= simple_format @recipe.body %></p>
       </div>
     </div>
+    <% if @recipe.user_id == current_user.id %>
+      <%= link_to "Edit", edit_recipe_path %>
+    <% end %>
   </div>
 </div>
 <div>
