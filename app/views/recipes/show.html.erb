@@ -1,9 +1,18 @@
 <div class="container d-flex justify-content-center mt-5">
   <div class="recipe-card">
-    <div class="recipe-image ">
+    <div class="recipe-image">
       <%= attachment_image_tag @recipe, :image, class: "recipe-image-tag" %>
     </div>
-    <h3><%= @recipe.title %></h3>
-    <p><%= simple_format @recipe.body %></p>
+    <div class="recipe-text p-3">
+      <h3 class="mt-2"><%= @recipe.title %></h3>
+      <div>
+        <p class="mb-0">Recipe</p>
+        <hr class="mt-0">
+        <p class="mt-1"><%= simple_format @recipe.body %></p>
+      </div>
+    </div>
   </div>
+</div>
+<div>
+  <p><%= @recipe.user.username %></p>
 </div>
