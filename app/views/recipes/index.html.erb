@@ -2,9 +2,9 @@
 <div class="cards">
   <%= @recipes.each do |recipe| %>
     <div class="recipe-index-card">
-      <div class="recipe-index-recipe">
+      <div class='recipe-index-recipe' style='background-image: url(<%= (attachment_image_tag recipe, :image) %>)'>
         <%= link_to recipe_path(recipe) do %>
-          <%= attachment_image_tag recipe, :image, class: "recipe-index-img" %>
+          <%#= attachment_image_tag recipe, :image, class: "recipe-index-img" %>
           <div>
             <h6><%= recipe.title %></h6>
             <p>Updated at <%= recipe.updated_at.strftime("%Y-%m-%d %H:%M") %></p>
