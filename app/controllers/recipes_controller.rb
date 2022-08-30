@@ -21,6 +21,7 @@ class RecipesController < ApplicationController
   end
 
   def edit
+    @recipe = Recipe.fing(params[:id])
   end
 
   private

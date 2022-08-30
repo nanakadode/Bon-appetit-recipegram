@@ -19,7 +19,7 @@
   </div>
   <div class="ml-4">
     <p class="mb-0 text-center">Uploaded by <strong><%= @recipe.user.username %></strong></p>
-    <%= link_to user_path(@recipe.user_id), class: "button is-success" do %>
+    <%= link_to user_path(@recipe.user_id), class: "button is-success pt-1 pb-1" do %>
       <p class="mb-0"><i class="fas fa-user"></i>  <%= @recipe.user.username %>'s page</p>
     <% end %>
   </div>
