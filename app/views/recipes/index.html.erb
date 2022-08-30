@@ -1,2 +1,11 @@
-<h1>Recipes#index</h1>
-<p>Find me in app/views/recipes/index.html.erb</p>
+<h3>Recipe lineup</h3>
+<div>
+  <%= @recipes.each do |recipe| %>
+    <div>
+      <%= attachment_image_tag recipe, :image %>
+      <h6><%= recipe.title %></h6>
+      <p><%= recipe.user.username %></p>
+      <p>Updated at <%= recipe.updated_at.strftime("%Y-%m-%d %H:%M") %></p>
+    </div>
+  <% end %>
+</div>
