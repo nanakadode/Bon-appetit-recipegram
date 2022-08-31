@@ -1,12 +1,14 @@
-<div class="mt-5 mb-5 m-4">
+<div class="mt-5 mb-5 m-6">
   <h3 class="mb-3 fw-bold">Recipe Edit</h3>
   <%= form_for(@recipe) do |f| %>
-    <%= f.label :title, "Title" %>
-    <%= f.text_field :title %><br />
-    <%= f.label :body, "Description" %>
-    <%= f.text_area :body, rows: 5 %><br />
-    <%= f.label :image, "Image" %>
-    <%= f.file_field :image %><br />
-    <%= f.submit "Submit", class: "user-edit-button" %>
+    <div class="recipe-edit-form">
+      <%= f.label :title, "Title" %><br />
+      <%= f.text_field :title ,class: "mb-3" %><br />
+      <%= f.label :body, "How to cook" %><br />
+      <%= f.text_area :body, rows: 5 ,class: "mb-3" %><br />
+      <%= f.label :image, "Image" %><br />
+      <%= f.file_field :image ,class: "mb-3" %><br />
+      <%= f.submit "Submit", class: "user-edit-button" %>
+    </div>
   <% end %>
 </div>
