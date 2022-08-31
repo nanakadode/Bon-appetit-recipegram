@@ -1,13 +1,13 @@
 <h3>Recipe lineup</h3>
 <div class="cards">
   <%= @recipes.each do |recipe| %>
-    <div class="recipe-index-card m-0">
+    <div class="recipe-index-card">
       <%= link_to recipe_path(recipe) do %>
         <div class='recipe-index-recipe'>
           <%= attachment_image_tag recipe, :image, class: "recipe-index-img" %>
           <div class="recipe-name d-flex">
-            <h6><%= recipe.title %></h6>
-            <p><%= recipe.updated_at.strftime("%Y-%m-%d %H:%M") %></p>
+            <h5><%= recipe.title %></h5>
+            <p class="font-small"><%= recipe.updated_at.strftime("%Y-%m-%d %H:%M") %></p>
           </div>
         <% end %>
         <div class="recipe-user d-flex">
