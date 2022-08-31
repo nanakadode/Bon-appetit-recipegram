@@ -1,19 +1,19 @@
 <h3>Recipe lineup</h3>
 <div class="cards">
   <%= @recipes.each do |recipe| %>
-    <div class="recipe-index-card">
-      <div class='recipe-index-recipe' style='background-image: url(<%= (attachment_image_tag recipe, (:image)) %>)'>
-        <%= link_to recipe_path(recipe) do %>
-          <%#= attachment_image_tag recipe, :image, class: "recipe-index-img" %>
-          <div>
+    <div class="recipe-index-card m-0">
+      <%= link_to recipe_path(recipe) do %>
+        <div class='recipe-index-recipe'>
+          <%= attachment_image_tag recipe, :image, class: "recipe-index-img" %>
+          <div class="recipe-name d-flex">
             <h6><%= recipe.title %></h6>
-            <p>Updated at <%= recipe.updated_at.strftime("%Y-%m-%d %H:%M") %></p>
+            <p><%= recipe.updated_at.strftime("%Y-%m-%d %H:%M") %></p>
           </div>
         <% end %>
-      </div>
-      <div class="recipe-user d-flex">
-        <%= attachment_image_tag recipe.user, :profile_img, fallback: "no-image.jpeg", class: "recipe-user-img"  %>
-        <p class="ml-3"><%= recipe.user.username %></p>
+        <div class="recipe-user d-flex">
+          <%= attachment_image_tag recipe.user, :profile_img, fallback: "no-image.jpeg", class: "recipe-user-img"  %>
+          <p class="ml-3"><%= recipe.user.username %></p>
+        </div>
       </div>
     </div>
   <% end %>
