@@ -54,4 +54,15 @@
   margin-top: 60px;
 }
 
-//
+// == recipe edit ===========================
+.submit {
+  margin-top: 20px;
+  color: white;
+  background-color: #999999;
+  font-size: 14px;
+  text-decoration: none !important ;
+  &:hover {
+    background-color: hsl(0, 0%, 33%);
+    color: white;
+  }
+}
