@@ -11,10 +11,16 @@
   </div>
   <% if @user.id == current_user.id %>
     <div class="item user-show-edit-button">
-      <%#= link_to edit_user_path(@user) do %>
-        <%= link_to "Edit", edit_user_path(@user), class: "button is-success" %>
-        <%# <a class="btn">Edit<i class="fas fa-pencil-alt"></i></a> %>
-        <%# end %>
-      </div>
-    <% end %>
+      <%= link_to "Edit", edit_user_path(@user), class: "button is-success" %>
+    </div>
+  <% end %>
+</div>
+<% @user.recipes.each do |recipe| %>
+  <%= attachment_image_tag recipe, :image %>
+  <%= recipe.title %>
+  <div class="d-flex">
+    <%= link_to "Detail", recipe_path(recipe), class: "button is-success" %>
+    <%= link_to "Edit", edit_recipe_path(recipe), class: "button is-success" %>
+    <%= link_to "Delete", user_recipe_path(recipe), method: :delete, data: { comfirm: "Do you want to delete #{recipe.title} ?" },class: "button is-success" %>
   </div>
+<% end %>

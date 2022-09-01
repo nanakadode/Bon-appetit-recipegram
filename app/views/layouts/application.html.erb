@@ -28,6 +28,9 @@
       <div class="item-buttons">
         <% if user_signed_in?  %>
           <div class="item-button">
+            <%= link_to "My page", user_path(current_user), class: "button is-warning is-light" %>
+          </div>
+          <div class="item-button">
             <%= link_to 'Log out', destroy_user_session_path, method: :delete, class: 'button is-warning is-light' %>
           </div>
           <div class="item-button">
