@@ -19,6 +19,7 @@ class UsersController < ApplicationController
     else
       render :edit
     end
+    raise
   end
 
   private

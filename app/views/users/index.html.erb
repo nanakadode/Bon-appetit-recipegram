@@ -1,17 +1,18 @@
-<h1>Users#index</h1>
-<p>Find me in app/views/users/index.html.erb</p>
-<div class="users-cards-container">
-  <% @users.each do |user| %>
-    <div class="user-card">
-      <div class="user-img-name-profile">
-        <%= link_to user_path(user) do %>
-          <%= attachment_image_tag user, :profile_img, fallback: "no-image.jpeg", class: "user-img" %>
-        <% end %>
-        <div class="user-name-profile">
-          <p class="user-name bold"><strong><%= link_to user.username, user_path(user), class: "user-name" %></strong></p>
-          <p class="user-profile"><small>Posts: </small></p>
+<div class="container">
+  <h3 class="mt-5 mb-5">Recipegramers <i class="fas fa-user"></i></h3>
+  <div class="users-cards-container">
+    <% @users.each do |user| %>
+      <div class="user-card">
+        <div class="user-img-name-profile">
+          <%= link_to user_path(user) do %>
+            <%= attachment_image_tag user, :profile_img, fallback: "no-image.jpeg", class: "user-img" %>
+          <% end %>
+          <div class="user-name-profile">
+            <p class="user-name bold"><strong><%= link_to user.username, user_path(user), class: "user-name" %></strong></p>
+            <p class="user-profile"><small>Posts: </small></p>
+          </div>
         </div>
       </div>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
 </div>
