@@ -9,7 +9,7 @@
           <% end %>
           <div class="user-name-profile">
             <p class="user-name bold"><strong><%= link_to user.username, user_path(user), class: "user-name" %></strong></p>
-            <p class="user-profile"><small>Posts: </small></p>
+            <p class="user-profile"><small>Posts: <%#= user.recipes.count %></small></p>
           </div>
         </div>
       </div>

@@ -20,13 +20,12 @@ class UsersController < ApplicationController
     else
       render :edit
     end
-    raise
   end
 
   private
 
   def user_params
-    params.require(:user).permit(:username, :profile_image, :email, :profile)
+    params.require(:user).permit(:username, :email, :profile, :profile_image)
   end
 
 end
