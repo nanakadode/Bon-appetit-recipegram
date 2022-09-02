@@ -21,6 +21,6 @@
   <div class="d-flex">
     <%= link_to "Detail", recipe_path(recipe), class: "button is-success" %>
     <%= link_to "Edit", edit_recipe_path(recipe), class: "button is-success" %>
-    <%= link_to "Delete", user_recipe_path(recipe), method: :delete, data: { comfirm: "Do you want to delete #{recipe.title} ?" },class: "button is-success" %>
+    <%= link_to "Delete", recipe_path(recipe), method: :delete, data: { comfirm: "Do you want to delete #{recipe.title} ?" },class: "button is-success" %>
   </div>
 <% end %>
