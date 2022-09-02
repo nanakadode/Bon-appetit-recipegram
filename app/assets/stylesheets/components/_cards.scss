@@ -188,3 +188,17 @@
   height: 70%;
   width: 100%;
 }
+
+.user-show-recipe-image-2 {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.recipe-date-2 {
+  position: absolute;
+  top: 70%;
+  right: 5px;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(55, 59, 58, 0.757);
+}
