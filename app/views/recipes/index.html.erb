@@ -1,6 +1,6 @@
-<div class="d-flex justify-content-between text-align-items-center">
-  <h3 class="mt-5 mb-4 ml-4 fw-b">Recipe lineup <i class="fas fa-utensils"></i></h3>
-  <%= link_to "Upload new recipe", new_recipe_path, class: "button is-success" %>
+<div class="d-flex justify-content-start text-align-items-center mt-5 mb-4 ml-4 fw-b">
+  <h3>Recipe lineup <i class="fas fa-utensils"></i></h3>
+  <%= link_to "Upload new recipe", new_recipe_path, class: "button is-success ml-4" %>
 </div>
 <div class="cards">
   <% @recipes.each do |recipe| %>
