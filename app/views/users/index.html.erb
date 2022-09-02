@@ -1,4 +1,4 @@
-<div class="container">
+<div class="user-container">
   <h3 class="mt-5 mb-5">Recipegramers <i class="fas fa-user"></i></h3>
   <div class="users-cards-container">
     <% @users.each do |user| %>
@@ -9,7 +9,7 @@
           <% end %>
           <div class="user-name-profile">
             <p class="user-name bold"><strong><%= link_to user.username, user_path(user), class: "user-name" %></strong></p>
-            <p class="user-profile"><small>Posts: <%#= user.recipes.count %></small></p>
+            <p class="user-profile"><small>Posts:</small> <%= user.recipes.count %> <small>recipes</small></p>
           </div>
         </div>
       </div>

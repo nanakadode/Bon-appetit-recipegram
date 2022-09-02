@@ -91,9 +91,9 @@
 
 // recipe [index] =================================
 
-.cards {
+.container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr !important ;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 16px;
   margin: auto 60px;
 }
@@ -154,25 +154,37 @@
   text-decoration: none;
 }
 
-
-
 // Smallest device
-@media (min-width: 100px) and (max-width: 575px) {
-  .cards {
+@media screen and (min-width: 100px) and (max-width: 767px) {
+  .container {
     grid-template-columns: 1fr;
   }
 }
 
 // Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {
-  .cards {
+@media screen and (min-width: 768px) {
+  .container {
     grid-template-columns: 1fr 1fr;
   }
 }
 
 // Large devices (desktops, 992px and up)
-@media (min-width: 992px) {
-  .cards {
+@media screen and (min-width: 992px) {
+  .container {
     grid-template-columns: 1fr 1fr 1fr;
   }
+}
+
+// Large devices (desktops, 1200px and up)
+@media screen and (min-width: 1200px) {
+  .container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+// == [user show] =============================================================
+.user-show-recipe-image {
+  object-fit: cover;
+  height: 80%;
+  width: 100%;
 }

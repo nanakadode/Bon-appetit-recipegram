@@ -15,14 +15,25 @@
     </div>
   <% end %>
 </div>
-<% @user.recipes.each do |recipe| %>
-  <%= attachment_image_tag recipe, :image %>
-  <%= recipe.title %>
-  <% if @user.id == current_user.id %>
-    <div class="d-flex">
-      <%= link_to "Detail", recipe_path(recipe), class: "button is-success" %>
-      <%= link_to "Edit", edit_recipe_path(recipe), class: "button is-success" %>
-      <%= link_to "Delete", recipe_path(recipe), method: :delete, data: { confirm: "Do you want to delete #{recipe.title} ?" },class: "button is-success" %>
+<div class="container">
+  <% @user.recipes.each do |recipe| %>
+    <div class="recipe-index-card">
+      <div class="recipe-index-recipe">
+        <%= attachment_image_tag recipe, :image, class: "user-show-recipe-image" %>
+        <div class="recipe-name">
+          <h5><%= recipe.title %></h5>
+        </div>
+        <div class="recipe-date">
+          <p class="time mb-0"><%= recipe.updated_at.strftime("%Y-%m-%d %H:%M") %></p>
+        </div>
+        <% if @user.id == current_user.id %>
+          <div class="d-flex justify-content-between">
+            <%= link_to "Detail", recipe_path(recipe), class: "button is-success" %>
+            <%= link_to "Edit", edit_recipe_path(recipe), class: "button is-success" %>
+            <%= link_to "Delete", recipe_path(recipe), method: :delete, data: { confirm: "Do you want to delete #{recipe.title} ?" },class: "button is-success" %>
+          </div>
+        <% end %>
+      </div>
     </div>
   <% end %>
-<% end %>
+</div>
