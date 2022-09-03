@@ -19,31 +19,26 @@
   <% @user.recipes.each do |recipe| %>
     <div class="recipe-index-card">
       <div class="recipe-index-recipe">
-        <% if @user.id == current_user.id %>
-          <%= attachment_image_tag recipe, :image, class: "user-show-recipe-image" %>
-          <div class="recipe-name">
-            <h5><%= recipe.title %></h5>
-          </div>
-          <div class="">
-            <p class="mb-0 ml-3">Posted at <%= recipe.updated_at.strftime("%Y-%m-%d %H:%M") %></p>
-          </div>
-          <div class="d-flex justify-content-evenly">
-            <%= link_to "Detail", recipe_path(recipe), class: "button is-success" do %>
+        <%= attachment_image_tag recipe, :image, class: "user-show-recipe-image" %>
+        <div class="recipe-name">
+          <h5><%= recipe.title %></h5>
+        </div>
+        <div class="user-recipe-date">
+          <p class="mb-0 ml-3">Posted at <%= recipe.updated_at.strftime("%Y-%m-%d %H:%M") %></p>
+        </div>
+        <div class="user-recipe-button d-flex justify-content-evenly">
+          <%= link_to recipe_path(recipe), class: "button is-success pl-2 pr-2" do %>
+            <p><i class="fas fa-utensils"></i> Detail</p>
+          <% end %>
+          <% if @user.id == current_user.id %>
+            <%= link_to edit_recipe_path(recipe), class: "button is-success pl-2 pr-2" do %>
+              <p><i class="fas fa-pen-nib"></i> Edit</p>
             <% end %>
-            <%= link_to "Edit", edit_recipe_path(recipe), class: "button is-success" do %>
+            <%= link_to recipe_path(recipe), method: :delete, data: { confirm: "Do you want to delete #{recipe.title} ?" },class: "button is-success pl-2 pr-2" do %>
+              <p><i class="fas fa-trash-alt"></i> Delete</p>
             <% end %>
-            <%= link_to "Delete", recipe_path(recipe), method: :delete, data: { confirm: "Do you want to delete #{recipe.title} ?" },class: "button is-success" do %>
-            <% end %>
-          </div>
-        <% else %>
-          <%= attachment_image_tag recipe, :image, class: "user-show-recipe-image-2" %>
-          <div class="recipe-name">
-            <h5><%= recipe.title %></h5>
-          </div>
-          <div class="recipe-date-2">
-            <p class="mb-0"><%= recipe.updated_at.strftime("%Y-%m-%d %H:%M") %></p>
-          </div>
-        <% end %>
+          <% end %>
+        </div>
       </div>
     </div>
   <% end %>
