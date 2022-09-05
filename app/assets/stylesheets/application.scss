@@ -34,15 +34,11 @@
   background-image: url(meal.png);
   width: 100%;
   margin: auto;
-  height: 940px;
   background-size: contain;
   margin-top: 20px;
   background-repeat: no-repeat;
-  background-position: 20% center;
-
-  // &::before {
-  //   display: block;
-  //   padding-top: 20%;
-
-  // }
+  background-position: center;
+  // following 2 is for no change the blank space
+    height: 0;
+    padding-top: 75%;
 }
