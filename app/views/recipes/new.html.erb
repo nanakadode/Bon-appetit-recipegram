@@ -1,6 +1,6 @@
 <div class="notification is-danger">
   <% if @recipe.errors.any? %>
-    <h3>* <%= pluralize(@ののrecipe.errors.count, 'error')  %></h3>
+    <h3>* <%= pluralize(@recipe.errors.count, 'error')  %></h3>
     <ul>
       <% @recipe.errors.each do |error| %>
         <li><%= error.full_message %></li>
