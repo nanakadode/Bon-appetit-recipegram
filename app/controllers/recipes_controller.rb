@@ -27,6 +27,8 @@ class RecipesController < ApplicationController
     @recipe = Recipe.find(params[:id])
     if @recipe.user_id != current_user.id
       redirect_to recipes_path, alert: "Your are not allowed to edit this recipe."
+    else
+      render :new
   end
 
   def update
