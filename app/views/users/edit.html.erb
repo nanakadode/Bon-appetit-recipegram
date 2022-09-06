@@ -1,5 +1,11 @@
-<div class="notification is-dangered">
+<div class="notification is-danger">
   <% if @user.errors.any? %>
+    <h3>* <%= pluralize(@user.errors.count, 'error') %></h3>
+    <ul>
+      <% @user.errors.each do |error| %>
+        <li><%= error.full_message %></li>
+      <% end %>
+    </ul>
   <% end %>
 </div>
 <section class="section">

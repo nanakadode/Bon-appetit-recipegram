@@ -17,7 +17,7 @@ class RecipesController < ApplicationController
     @recipe = Recipe.new(recipe_params)
     @recipe.user_id = current_user.id
     if @recipe.save
-      redirect_to recipe_path(@recipe)
+      redirect_to recipe_path(@recipe), notice: 'New recipe has been added.'
     else
       render :new
     end
@@ -26,7 +26,7 @@ class RecipesController < ApplicationController
   def edit
     @recipe = Recipe.find(params[:id])
     if @recipe.user_id != current_user.id
-      redirect_to recipes_path, alert: "Your are not allowed to edit this recipe."
+      redirect_to recipes_path, alert: 'Your are not allowed to edit this recipe.'
     else
       render :new
     end
@@ -36,7 +36,7 @@ class RecipesController < ApplicationController
     @recipe = Recipe.find(params[:id])
     @recipe.update(recipe_params)
     if @recipe.save
-      redirect_to recipe_path(@recipe)
+      redirect_to recipe_path(@recipe), notice: 'Recipe has been updated.'
     else
       render :edit
     end
