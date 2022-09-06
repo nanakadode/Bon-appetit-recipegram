@@ -29,6 +29,7 @@ class RecipesController < ApplicationController
       redirect_to recipes_path, alert: "Your are not allowed to edit this recipe."
     else
       render :new
+    end
   end
 
   def update
