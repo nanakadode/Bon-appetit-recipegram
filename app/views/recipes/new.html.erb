@@ -1,17 +1,17 @@
+<div class="notification is-danger">
+  <% if @recipe.errors.any? %>
+    <h3>* <%= pluralize(@ののrecipe.errors.count, 'error')  %></h3>
+    <ul>
+      <% @recipe.errors.each do |error| %>
+        <li><%= error.full_message %></li>
+      <% end %>
+    </ul>
+  <% end %>
+</div>
 <section class="section">
-  <div class="d-flex justify-content-start">
-    <h3 class="mb-5">New Recipe</h3>
-    <% if @recipe.errors.any? %>
-      <div class="error_explanation ml-5 text-danger">
-        <h3>* <%= pluralize(@recipe.errors.count, 'error')  %></h3>
-        <ul>
-          <% @recipe.errors.each do |error| %>
-            <li><%= error.full_message %></li>
-          <% end %>
-        </ul>
-      </div>
-    <% end %>
-  </div>
+  <h3 class="mb-5">New Recipe</h3>
+  <%# <div class="d-flex justify-content-start"> %>
+  <%# </div> %>
   <div class="container">
     <div class="columns is-centered">
       <div class="columns is-6">
