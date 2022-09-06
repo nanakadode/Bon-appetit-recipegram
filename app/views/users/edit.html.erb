@@ -1,6 +1,10 @@
+<div class="notification is-dangered">
+  <% if @user.errors.any? %>
+  <% end %>
+</div>
 <section class="section">
   <h3>User Edit</h3>
-  <div class="container">
+  <div class="container mt-5">
     <div class="columns is-centered">
       <div class="columns is-6">
         <%= form_for @user do |f| %>

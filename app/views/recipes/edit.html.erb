@@ -1,3 +1,13 @@
+<div class="notification is-danger">
+  <% if @recipe.errors.any? %>
+    <h3>* <%= pluralize(@recipe.errors.count, 'error')  %></h3>
+    <ul>
+      <% @recipe.errors.each do |error| %>
+        <li><%= error.full_message %></li>
+      <% end %>
+    </ul>
+  <% end %>
+</div>
 <section class="section">
   <h3>Recipe Edit</h3>
   <div class="container">
