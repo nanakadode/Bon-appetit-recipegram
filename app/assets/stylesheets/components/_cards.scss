@@ -72,9 +72,6 @@
 }
 
 // recipe show page
-.recipe-card {
-  overflow: hidden;
-}
 
 .recipe-image-tag {
   height: 400px;
@@ -87,6 +84,7 @@
   border-radius: 10px;
   overflow: hidden;
   width: 600px;
+  // position: absolute;
 }
 
 .recipe-new > div {
