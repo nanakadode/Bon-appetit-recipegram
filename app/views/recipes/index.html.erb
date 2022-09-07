@@ -8,6 +8,9 @@
       <%= link_to recipe_path(recipe), class: 'recipe-index-card' do %>
         <div class='recipe-index-recipe'>
           <%= attachment_image_tag recipe, :image, class: "recipe-index-img" %>
+          <div class="like">
+            <i class="far fa-heart"></i>
+          </div>
           <div class="recipe-name">
             <h5><%= recipe.title %></h5>
           </div>
