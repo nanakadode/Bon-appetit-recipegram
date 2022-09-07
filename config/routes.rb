@@ -4,6 +4,6 @@ Rails.application.routes.draw do
   resources :users, only: %i[index show edit update]
 
   resources :recipes, only: %i[index new create edit update show destroy] do
-    resources :like, only: %i[create destroy]
+    resource :likes, only: %i[create destroy]
   end
 end
