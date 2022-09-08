@@ -10,6 +10,6 @@ class Recipe < ApplicationRecord
   end
 
   def liked?(user)
-    self.
+    self.likes.exists?(user_id: user.id)
   end
 end
