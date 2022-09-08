@@ -14,7 +14,9 @@
           <%= link_to "Edit", edit_user_path(@user), class: "button is-success" %>
         </div>
         <div class="item user-show-edit-button">
-          <%= link_to "Favorite recipe", likes_user_path(@user), class: "button is-success" %>
+          <%= link_to likes_user_path(@user), class: "button is-success" do %>
+            <p>Favorite recipe <i class="fas fa-heart"></i></p>
+          <% end %>
         </div>
       </div>
     <% end %>
