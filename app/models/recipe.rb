@@ -9,4 +9,7 @@ class Recipe < ApplicationRecord
     validates :image
   end
 
+  def liked?(user)
+    self.
+  end
 end
