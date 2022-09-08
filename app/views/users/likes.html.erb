@@ -2,7 +2,7 @@
   <h3>My Favorite Recipes <i class="fas fa-heart" style="color: #f14668;"></i></h3>
 </div>
 <div class="container">
-  <% @likes.each do |like| %>
-    <%= render "shared/card",  %>
+  <% @like_recipes.each do |like_recipe| %>
+    <%= render "shared/card", recipe: like_recipe  %>
   <% end %>
 </div>
