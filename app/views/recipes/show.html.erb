@@ -5,11 +5,11 @@
       <div class="like bold">
         <% if !@recipe.liked?(current_user) %>
           <%= link_to recipe_likes_path(@recipe), method: :post do %>
-            <i class="far fa-heart like-btn"></i>
+            <i class="far fa-heart"></i>
           <% end %>
         <% else %>
           <%= link_to recipe_likes_path(@recipe), method: :delete do %>
-            <i class="far fa-heart like-btn"></i>
+            <i class="fas fa-heart"></i>
           <% end %>
         <% end %>
       </div>
