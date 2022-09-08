@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!, except: [:index]
-  before_action :authenticate_user!, only: [:likes]
+  # before_action :authenticate_user!, only: [:likes]
+
   def index
     @users = User.all
   end
