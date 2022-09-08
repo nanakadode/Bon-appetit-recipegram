@@ -15,7 +15,14 @@
       </div>
     </div>
     <div class="recipe-text px-4 pt-3 pb-3">
-      <h3 class="mt-2"><%= @recipe.title %></h3>
+      <div class="d-flex justify-content-between align-items-center">
+        <div>
+          <h3 class="mt-2"><%= @recipe.title %></h3>
+        </div>
+        <div>
+          <p><i class="fas fa-heart" style="color: #f14668;"></i> <%= @recipe.likes.count %></p>
+        </div>
+      </div>
       <div class="px-2">
         <p class="mb-0">Recipe</p>
         <hr class="mt-0">
