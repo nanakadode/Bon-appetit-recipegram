@@ -3,7 +3,6 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
-    # @recipes = User.find([:id]).recipe
   end
 
   def show

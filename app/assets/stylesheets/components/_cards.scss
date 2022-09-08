@@ -91,6 +91,24 @@
   margin: 20px;
 }
 
+.recipe-image {
+  position: relative;
+}
+
+.like {
+  position: absolute;
+  top: 5%;
+  right: 3%;
+}
+
+.like i {
+  color: #f14668;
+  font-size: 30px;
+  text-shadow: 0 0 4px white,
+  0 0 4px white,
+  0 0 4px white;
+}
+
 // recipe [index] =================================
 
 .container {
@@ -131,11 +149,6 @@
   width: 80%;
 }
 
-.like {
-  position: absolute;
-  top: 5%;
-  right: 5%;
-}
 
 .recipe-date {
   position: absolute;
