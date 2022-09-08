@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!, except: [:index]
-
+  before_action :authenticate_user!, only: [:likes]
   def index
     @users = User.all
   end
@@ -26,10 +26,19 @@ class UsersController < ApplicationController
     end
   end
 
+  def likes
+    likes = Like.where(user_id: @user.id).pluck(:recipe_id)
+    @likes = Recipe.find(likes)
+  end
+
   private
 
   def user_params
     params.require(:user).permit(:username, :email, :profile, :profile_img)
+  end
+
+  def set_user
+    @user = User.find(params[:id])
   end
 
 end
