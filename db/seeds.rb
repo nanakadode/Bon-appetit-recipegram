@@ -99,50 +99,56 @@ recipe_4 = Recipe.create!(
   updated_at: '2019-02-14 12:26'
 )
 
-recipe_1 = Recipe.create!(
+recipe_5 = Recipe.create!(
   user_id: User.offset(rand(User.count)).first.id,
-  title: "",
-  body: "",
-  image: File.open("./app/assets/images/recipe_1.webp"),
-  updated_at: '2022-10-01 10:21'
+  title: "Buckwheat Waffles",
+  body: "1. Turn on your waffle maker and set to medium.
+  2. In a large bowl, whisk together the buckwheat flour, baking powder, baking soda, salt, and cinnamon.
+  3. Place the egg whites in a medium bowl and beat with a hand mixer or egg beater. Sprinkle in the sugar as you beat the egg whites. Beat egg whites until you have soft peaks.
+  4. In a medium bowl, whisk together the egg yolks, melted butter, yogurt, milk, and water
+  5. Pour the yogurt/milk/butter/egg mixture into the buckwheat flour mixture and stir until just combined. It's okay if it's a little lumpy.
+  6. Stir a third of the beaten egg whites into the batter until completely incorporated. Gently fold the remaining beaten egg whites into the batter until just combined, and there are no streaks of egg whites. Be gentle so that you do not deflate the egg whites too much.
+  7. Working in batches, pour or spoon the batter into the wells of the preheated waffle maker, until the batter almost come to the edges. You will know if you've over-filled it because the batter will spill out of the waffle maker. No harm done, but it's a little messy.",
+  image: File.open("./app/assets/images/recipe_5.webp"),
+  updated_at: '2022-03-31 07:51'
 )
 
-recipe_1 = Recipe.create!(
+recipe_6 = Recipe.create!(
   user_id: User.offset(rand(User.count)).first.id,
   title: "",
   body: "",
-  image: File.open("./app/assets/images/recipe_1.webp"),
-  updated_at: '2022-10-01 10:21'
+  image: File.open("./app/assets/images/recipe_6.webp"),
+  updated_at: '2021-12-01 09:32'
 )
 
-recipe_1 = Recipe.create!(
+recipe_7 = Recipe.create!(
   user_id: User.offset(rand(User.count)).first.id,
   title: "",
   body: "",
-  image: File.open("./app/assets/images/recipe_1.webp"),
-  updated_at: '2022-10-01 10:21'
+  image: File.open("./app/assets/images/recipe_7.webp"),
+  updated_at: '2022-02-22 22:22'
 )
 
-recipe_1 = Recipe.create!(
+recipe_8 = Recipe.create!(
   user_id: User.offset(rand(User.count)).first.id,
   title: "",
   body: "",
-  image: File.open("./app/assets/images/recipe_1.webp"),
-  updated_at: '2022-10-01 10:21'
+  image: File.open("./app/assets/images/recipe_8.webp"),
+  updated_at: '2022-10-09 21:00'
 )
 
-recipe_1 = Recipe.create!(
+recipe_9 = Recipe.create!(
   user_id: User.offset(rand(User.count)).first.id,
   title: "",
   body: "",
-  image: File.open("./app/assets/images/recipe_1.webp"),
-  updated_at: '2022-10-01 10:21'
+  image: File.open("./app/assets/images/recipe_9.webp"),
+  updated_at: '2022-05-05 15:01'
 )
 
-recipe_1 = Recipe.create!(
+recipe_10 = Recipe.create!(
   user_id: User.offset(rand(User.count)).first.id,
   title: "",
   body: "",
-  image: File.open("./app/assets/images/recipe_1.webp"),
-  updated_at: '2022-10-01 10:21'
+  image: File.open("./app/assets/images/recipe_10.webp"),
+  updated_at: '2022-06-27 14:50'
 )
