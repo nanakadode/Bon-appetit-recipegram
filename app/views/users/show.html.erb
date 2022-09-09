@@ -31,7 +31,7 @@
           <h5><%= recipe.title %></h5>
         </div>
         <div class="user-recipe-date">
-          <p class="mb-0 ml-3">Posted at <%= recipe.updated_at.strftime("%Y/%m/%d %H:%M") %></p>
+          <p class="mb-0 ml-3">Posted at <%= recipe.updated_at.strftime("%Y/%m/%d  %H:%M") %></p>
         </div>
         <div class="user-recipe-button d-flex justify-content-evenly">
           <%= link_to recipe_path(recipe), class: "button is-success pl-2 pr-2" do %>
