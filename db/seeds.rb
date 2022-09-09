@@ -115,40 +115,64 @@ recipe_5 = Recipe.create!(
 
 recipe_6 = Recipe.create!(
   user_id: User.offset(rand(User.count)).first.id,
-  title: "",
-  body: "",
+  title: "Special Burger",
+  body: "1. Put the cold ground beef in mixing bowl. Sprinkle the other ingredients evenly over top. Fold the meat over a few times to get everything incorporated. This entire process should only take about 30 to 45 seconds. Don’t over handle the meat.
+  2. Rather than forming the patties in your hand, form them on a tray. This makes it easier to shape the patties without over-handling or warming the meat. I like to use a cookie sheet lined with parchment paper, but any tray or platter will do.On the tray, divide the meat into 6 equal parts (about 5 1/4 ounces each). Gently form each portion into a patty that is 4-inches across with 1-inch sides and a shallow depression in the middle (see photos below). You want the outer 1/2 inch of the patty to be slightly taller than the inside. This keeps the patty from shrinking too much and from puffing up in the center during grilling.Cover the patties with plastic wrap and transfer to the fridge while you heat up your grill and butter your buns.
+  3. Heat a gas or charcoal grill to 450 to 500°F, or hot enough that you can only hold your hand above the grill grates for about 1 second.
+  4. Place patties on the grill over direct heat. Cook to your desired doneness.
+  5. When you have about 1 minute left on the cooking time, add the cheese to the burgers and the buttered buns to the grill over indirect heat.
+  6. Remove burgers and buns from grill and transfer to a clean platter. Let the burgers rest for 1 minute before serving.
+  7. Serve with tomato jam, mayonnaise, bacon jam, garlic aioli, blue cheese sauce, sautéed mushrooms, Thousand Island, or the classic and always wonderful lettuce, tomato, pickles, and red onion.",
   image: File.open("./app/assets/images/recipe_6.webp"),
   updated_at: '2021-12-01 09:32'
 )
 
 recipe_7 = Recipe.create!(
   user_id: User.offset(rand(User.count)).first.id,
-  title: "",
-  body: "",
+  title: "Broiled Grapefruit",
+  body: "1. To make it easier for the grapefruit halves to sit in the pan, you may want to cut 1/4 inch off the bottom of each half, so they don't wobble.
+  2. To make it easier to remove the grapefruit segments with a spoon once the grapefruit is cooked, use a sharp paring knife to cut around the edges of the fruit, where the fruit meets the rind.
+  3. Then gently cut inside the grapefruit, along the edges of the segments. Don't cut all the way through the grapefruit, just to the rind if you can.
+  4. Line a broiling or roasting pan with foil or parchment paper (foil works better, doesn't burn). Place the grapefruit halves, cut side up in the pan.
+  5. Spread brown sugar over the top of the exposed fruit (not the rind), about 2 to 3 teaspoons of brown sugar per half (more or less to taste). Yellow grapefruit tends to be more sour than ruby red grapefruit, so you may want to use more sugar for yellow than for red grapefruit.
+  6. Place under a broiler for 3 to 5 minutes, until the brown sugar is bubbly and beginning to brown and caramelize.Remove from oven. Let cool for a minute. Eat while still warm.",
   image: File.open("./app/assets/images/recipe_7.webp"),
   updated_at: '2022-02-22 22:22'
 )
 
 recipe_8 = Recipe.create!(
   user_id: User.offset(rand(User.count)).first.id,
-  title: "",
-  body: "",
+  title: "Grapefruit Shandy",
+  body: "1. In a 12-ounce glass, pour in the beer and grapefruit juice or soda. Gently stir to combine. Garnish with a grapefruit slice and mint, if desired.
+  2. Serve cold.",
   image: File.open("./app/assets/images/recipe_8.webp"),
   updated_at: '2022-10-09 21:00'
 )
 
 recipe_9 = Recipe.create!(
   user_id: User.offset(rand(User.count)).first.id,
-  title: "",
-  body: "",
+  title: "Grilled Peaches",
+  body: "1. Preheat the grill to medium-high heat, at 400°F.
+  2. In a small bowl, whisk together the brown sugar, granulated sugar, cinnamon, and salt. Set aside.
+  3. Brush the cut side of the peaches with the melted butter. Place the peaches on the hot grill, cut side-down, and cook for 2 to 3 minutes, until you can see clear grill marks. The grill remains uncovered the whole time. Flip and cook them cut side-up for 2 minutes.
+  4. To serve, place a grilled peach half on a plate and sprinkle 1/2 tablespoon brown sugar mixture on top while the peach is still warm. Top with a scoop of vanilla ice cream. Serve and enjoy!
+  5. Leftovers can be stored in an airtight container in the fridge for up to 3 days. To reheat the peaches, place them in a 350°F oven for 10 minutes or in the microwave for 1 minute. They are also great served cold!",
   image: File.open("./app/assets/images/recipe_9.webp"),
   updated_at: '2022-05-05 15:01'
 )
 
 recipe_10 = Recipe.create!(
   user_id: User.offset(rand(User.count)).first.id,
-  title: "",
-  body: "",
+  title: "Plum Walnut Skillet Cake",
+  body: "1. Preheat the oven to 350ºF.
+  2. Generously butter a 10-inch ovenproof skillet with a heatproof handle or a 9-inch cake pan. Halve, pit, and thinly slice the plums.
+  3. In a food processor or a nut mill, very finely chop the walnuts. Transfer to a bowl.
+  4. Add the butter and sugar to the bowl of the food processor and process until creamy, 30 to 60 seconds.
+  5. Add the eggs one at a time, and process after each addition, until fluffy. Add the lemon zest, vanilla, flour, baking powder and salt, and pulse just until the batter is smooth.
+  6. Scrape the batter into the skillet and smooth the top with the back of a spoon.
+  7. Lay slices of plums in a ring around the outside edge of the pan, overlapping the slices slightly. Arrange a second ring of slices inside the first, and then fill in the very middle of the cake with the remaining slices. Sprinkle with the turbinado sugar.
+  8. Begin checking the cake around 35 minutes, and continue baking (checking every 5 to 10 minutes) until the top is browned and a toothpick inserted into the middle of the cake comes out clean. Total cooking time is typically 40 to 50 minutes.
+  9. The cake is sweet enough as it is, but if you want to add a little shine for an even more beautiful presentation, heat the honey in the microwave for 10 seconds and brush the cake with it.",
   image: File.open("./app/assets/images/recipe_10.webp"),
   updated_at: '2022-06-27 14:50'
 )
