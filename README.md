@@ -1,8 +1,10 @@
-# 🍽 Bon appetit 🥞 ~recipegram~
+# 🍽 Bon appetit 🥞 recipegram
 
 Let's share your special recipe to everyone in the world!
 
-<img width="844" alt="image" src="https://user-images.githubusercontent.com/99185540/189480712-b1e48148-2a3d-4980-8d0c-4d766effc50e.png">
+<img width="445" alt="image" src="https://user-images.githubusercontent.com/99185540/189481196-4fafe100-ff4e-4e7f-a097-9dca3a8a0e52.png">
+<img width="441" alt="image" src="https://user-images.githubusercontent.com/99185540/189481270-31b11228-dd4b-452c-a944-8a8b9e700c87.png">
+
 
 What you can do with this App:)
  -  Uploading your recipes and share to everyone
