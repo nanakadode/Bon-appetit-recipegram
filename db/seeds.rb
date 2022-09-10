@@ -243,4 +243,4 @@ recipe_14 = Recipe.create!(
   updated_at: '2022-08-27 17:04'
 )
 
-puts 'All seed created!'
+puts 'All seed completed!'
