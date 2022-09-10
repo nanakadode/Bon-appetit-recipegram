@@ -1,24 +1,53 @@
-# README
+# 🍽 Bon appetit 🥞 ~recipegram~
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Let's share your special recipe to everyone in the world!
 
-Things you may want to cover:
+<img width="844" alt="image" src="https://user-images.githubusercontent.com/99185540/189480712-b1e48148-2a3d-4980-8d0c-4d766effc50e.png">
 
-* Ruby version
+What you can do with this App:)
+ -  Uploading your recipes and share to everyone
+ -  Searching other user's recipes
+ -  Saving your favorite recipes as bookmark and list them in mypage
+   
 
-* System dependencies
+## Getting Started
+### Setup
 
-* Configuration
+Install gems
+```
+bundle install
+```
+Install JS packages
+```
+yarn install
+```
 
-* Database creation
+### DB Setup
+```
+rails db:create
+rails db:migrate
+rails db:seed
+```
 
-* Database initialization
+### Run a server
+```
+rails s
+```
 
-* How to run the test suite
+## Built With
+- [Rails 6](https://guides.rubyonrails.org/) - Backend / Front-end
+- [fontowesome](https://fontawesome.com/) - Font
+- [refile](https://github.com/refile/refile) - File upload 
+- [PostgreSQL](https://www.postgresql.org/) - Database
+- [Bootstrap](https://getbootstrap.com/) — Styling
+- [Bulma](https://bulma.io/) — Styling
+- [Figma](https://www.figma.com) — Prototyping
 
-* Services (job queues, cache servers, search engines, etc.)
+## Created by
+- [Nana Kadode](https://www.linkedin.com/in/nana-kadode/)
 
-* Deployment instructions
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-* ...
+## License
+This project is licensed under the MIT License
